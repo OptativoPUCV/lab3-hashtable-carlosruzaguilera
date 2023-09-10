@@ -113,3 +113,24 @@ hashmap.c:82:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 af91ff0
+Sun 10 Sep 2023 04:21:54 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:81:5: error: data definition has no type or storage class [-Werror]
+   81 |     free(oldBuckets);
+      |     ^~~~
+hashmap.c:81:5: error: type defaults to ‘int’ in declaration of ‘free’ [-Werror=implicit-int]
+hashmap.c:81:5: error: parameter names (without types) in function declaration [-Werror]
+hashmap.c:81:5: error: conflicting types for ‘free’; have ‘int()’
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:555:13: note: previous declaration of ‘free’ with type ‘void(void *)’
+  555 | extern void free (void *__ptr) __THROW;
+      |             ^~~~
+In file included from test.c:4:
+hashmap.c:82:1: error: expected identifier or ‘(’ before ‘}’ token
+   82 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0c51639

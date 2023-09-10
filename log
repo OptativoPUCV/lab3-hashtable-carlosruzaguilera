@@ -43,3 +43,15 @@ hashmap.c:70:28: error: ‘oluckets’ undeclared (first use in this function); 
 cc1: all warnings being treated as errors
 Compilation failed
 29f0ffa
+Sun 10 Sep 2023 04:21:09 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:70:28: error: ‘oluckets’ undeclared (first use in this function); did you mean ‘oldBuckets’?
+   70 |             insertMap(map, oluckets[i]->key, oldBuckets[i]->value);
+      |                            ^~~~~~~~
+      |                            oldBuckets
+hashmap.c:70:28: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+ba93797

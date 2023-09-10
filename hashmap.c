@@ -58,7 +58,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    if (map == NULL) return
+    if (map == NULL) return;
 
     long oldCapacity = map->capacity;
     Pair ** oldBuckets = map->buckets;

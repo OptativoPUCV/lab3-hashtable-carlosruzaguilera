@@ -404,3 +404,38 @@ hashmap.c:135:5: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 ade1adb
+Sun 10 Sep 2023 04:51:57 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:131:54: error: invalid type argument of ‘->’ (have ‘long int’)
+  131 |         if (map->buckets[i] != NULL && map->buckets[i->key != NULL) {
+      |                                                      ^~
+hashmap.c:131:67: error: expected ‘]’ before ‘)’ token
+  131 |         if (map->buckets[i] != NULL && map->buckets[i->key != NULL) {
+      |                                                                   ^
+hashmap.c:132:18: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘curren’; did you mean ‘current’?
+  132 |             map->curren = i
+      |                  ^~~~~~
+      |                  current
+hashmap.c:132:28: error: expected ‘;’ before ‘return’
+  132 |             map->curren = i
+      |                            ^
+      |                            ;
+  133 |             return map->buckes[i]
+      |             ~~~~~~          
+hashmap.c: At top level:
+hashmap.c:137:5: error: expected identifier or ‘(’ before ‘return’
+  137 |     return NULL;
+      |     ^~~~~~
+hashmap.c:138:1: error: expected identifier or ‘(’ before ‘}’ token
+  138 | }
+      | ^
+hashmap.c: In function ‘firstMap’:
+hashmap.c:135:5: error: control reaches end of non-void function [-Werror=return-type]
+  135 |     }
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+79a79b0

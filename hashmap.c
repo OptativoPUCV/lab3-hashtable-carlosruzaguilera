@@ -129,8 +129,8 @@ Pair * firstMap(HashMap * map) {
 
   for (long i= 0; i < map->capacity; i++) 
         if (map->buckets[i] != NULL && map->buckets[i->key != NULL) {
-            map->curren = i;
-            return map->buckes[i];
+            map->curren = i
+            return map->buckes[i]
         }
     }
 

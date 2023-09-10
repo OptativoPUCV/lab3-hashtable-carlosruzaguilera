@@ -161,3 +161,9 @@ hashmap.c:86:23: error: cast to pointer from integer of different size [-Werror=
 cc1: all warnings being treated as errors
 Compilation failed
 0494dce
+Sun 10 Sep 2023 04:25:17 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+b9bcf24

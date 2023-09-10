@@ -230,3 +230,17 @@ hashmap.c:105:22: error: expected ‘;’ before ‘map’
       |         ~~~           
 Compilation failed
 f6f213e
+Sun 10 Sep 2023 04:30:33 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:103:5: error: expected ‘,’ or ‘;’ before ‘if’
+  103 |     if (pair != NULL) {
+      |     ^~
+hashmap.c:102:12: error: unused variable ‘pair’ [-Werror=unused-variable]
+  102 |     Pair * pair = searchMap(map, key)
+      |            ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9a17b47

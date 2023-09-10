@@ -99,11 +99,11 @@ HashMap * createMap(long capacity) {
 
 
 void eraseMap(HashMap * map, char * key) {
-    Pair * pair = searchMap(map, key);
+    Pair * pair = searchMap(map, key)
     if (pair != NULL) {
         free(pair->key);
-        pair->key = N
-        map
+        pair->key = NULL;
+        map->size--;
     }
 }
 

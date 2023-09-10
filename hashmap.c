@@ -40,7 +40,12 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-    if (map == NULL || key == NULL) return;
+  if (map == NULL || key == NULL) return;
+  long idx = hash(key, map->capacity);
+  while (map->buckets[idx] != NULL && map->buckets[idx]->key != NULL) {
+        if (strcmp(map->buckets[idx]->key, key) == 0) return; // No insertar claves repetidas
+        idx = (idx + 1) % map->capacity; // Resolución de colisiones
+    }
 
 }
 

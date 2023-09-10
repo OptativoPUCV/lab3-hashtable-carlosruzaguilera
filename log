@@ -213,3 +213,20 @@ hashmap.c:105:11: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 fada7f6
+Sun 10 Sep 2023 04:30:07 AM UTC: 
+ hashmap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:105:21: error: ‘N’ undeclared (first use in this function)
+  105 |         pair->key = N
+      |                     ^
+hashmap.c:105:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:105:22: error: expected ‘;’ before ‘map’
+  105 |         pair->key = N
+      |                      ^
+      |                      ;
+  106 |         map
+      |         ~~~           
+Compilation failed
+f6f213e

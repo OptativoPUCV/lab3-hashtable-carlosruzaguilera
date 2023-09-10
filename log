@@ -180,3 +180,9 @@ hashmap.c:94:25: error: expected ‘;’ before ‘newMap’
       |     ~~~~~~               
 Compilation failed
 a382675
+Sun 10 Sep 2023 04:26:20 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  6|3
+total_score: 40/70
+ad8f814

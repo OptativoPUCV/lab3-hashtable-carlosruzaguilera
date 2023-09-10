@@ -91,11 +91,12 @@ HashMap * createMap(long capacity) {
     }
 
     newMap->capacity = capacity;
-    newMap->current = -1
-    newMap->sie = 0;
+    newMap->current = -1;
+    newMap->size = 0;
 
     return newMap;
 }
+
 
 void eraseMap(HashMap * map,  char * key) {    
 

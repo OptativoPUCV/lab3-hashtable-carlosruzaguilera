@@ -114,7 +114,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     while (map->buckets[idx] != NULL) {
         if (map->buckets[idx]->key != NULL && strcmp(map->buckets[idx]->key, key) == 0) {
             map->current = idx;
-            return map->buckets[idx]
+            return map->buckets[idx];
 
     return NULL;
 }

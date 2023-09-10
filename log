@@ -186,3 +186,30 @@ Sun 10 Sep 2023 04:26:20 AM UTC:
  tests:  6|3
 total_score: 40/70
 ad8f814
+Sun 10 Sep 2023 04:29:43 AM UTC: 
+ hashmap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:102:29: error: ‘ma’ undeclared (first use in this function); did you mean ‘map’?
+  102 |     Pair * pair = searchMap(ma, key);
+      |                             ^~
+      |                             map
+hashmap.c:102:29: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:104:9: error: implicit declaration of function ‘fee’; did you mean ‘free’? [-Werror=implicit-function-declaration]
+  104 |         fee(pair->key);
+      |         ^~~
+      |         free
+hashmap.c:105:9: error: ‘pa’ undeclared (first use in this function); did you mean ‘pair’?
+  105 |         pa
+      |         ^~
+      |         pair
+hashmap.c:105:11: error: expected ‘;’ before ‘}’ token
+  105 |         pa
+      |           ^
+      |           ;
+  106 |     }
+      |     ~      
+cc1: all warnings being treated as errors
+Compilation failed
+fada7f6

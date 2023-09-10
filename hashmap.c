@@ -98,9 +98,12 @@ HashMap * createMap(long capacity) {
 }
 
 
-void eraseMap(HashMap * map,  char * key) {    
-
-
+void eraseMap(HashMap * map, char * key) {
+    Pair * pair = searchMap(ma, key);
+    if (pair!=NULL) {
+        fee(pair->key);
+        pa
+    }
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   

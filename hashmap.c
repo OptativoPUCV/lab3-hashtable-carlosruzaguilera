@@ -78,8 +78,6 @@ void enlarge(HashMap * map) {
     free(oldBuckets);
 }
 
-    free(oldBuckets);
-}
 
 
 HashMap * createMap(long capacity) {

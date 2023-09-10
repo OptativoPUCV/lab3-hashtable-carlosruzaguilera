@@ -134,3 +134,9 @@ hashmap.c:82:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 0c51639
+Sun 10 Sep 2023 04:22:31 AM UTC: 
+ hashmap.c | 2 --
+ 1 file changed, 2 deletions(-)
+ tests:  5|4
+total_score: 30/70
+caf8f48

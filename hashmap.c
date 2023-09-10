@@ -44,7 +44,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
     long idx = hash(key, map->capacity);
     while (map->buckets[idx] != NULL && map->buckets[idx]->key != NULL) {
-        if (strcmp(map->buckets[idx]->key, key) == 0) return; // No insertar claves repetidas
+        if (strcmp(map->buckets[idx]->key, key) == 0) return;
         idx = (idx + 1) % map->capacity; // Resolución de colisiones
     }
 
@@ -58,9 +58,22 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
+    if (map == NULL) return
 
+    long oldCapacity = map->capacity;
+    Pair ** oldBuckets = map->buckets;
 
+    
+
+    for (long i = 0; i < oldCapacity; i++) {
+        if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL) {
+            insertMap(map, oluckets[i]->key, oldBuckets[i]->value);
+            free(oldBuckets[i]->key);
+            free(oldBuckets[i]);
+        }
+    }
+
+    free(oldBuckets);
 }
 
 

@@ -20,3 +20,26 @@ Sun 10 Sep 2023 02:42:21 AM UTC:
  tests:  4|5
 total_score: 20/70
 70a12b3
+Sun 10 Sep 2023 04:20:57 AM UTC: 
+ hashmap.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:63:5: error: expected expression before ‘long’
+   63 |     long oldCapacity = map->capacity;
+      |     ^~~~
+hashmap.c:63:5: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+hashmap.c:60:6: note: declared here
+   60 | void enlarge(HashMap * map) {
+      |      ^~~~~~~
+hashmap.c:68:26: error: ‘oldCapacity’ undeclared (first use in this function)
+   68 |     for (long i = 0; i < oldCapacity; i++) {
+      |                          ^~~~~~~~~~~
+hashmap.c:68:26: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:70:28: error: ‘oluckets’ undeclared (first use in this function); did you mean ‘oldBuckets’?
+   70 |             insertMap(map, oluckets[i]->key, oldBuckets[i]->value);
+      |                            ^~~~~~~~
+      |                            oldBuckets
+cc1: all warnings being treated as errors
+Compilation failed
+29f0ffa

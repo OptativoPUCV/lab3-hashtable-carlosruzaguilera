@@ -439,3 +439,16 @@ hashmap.c:135:5: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 79a79b0
+Sun 10 Sep 2023 04:53:13 AM UTC: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:133:35: error: expected ‘;’ before ‘}’ token
+  133 |             return map->buckets[i]
+      |                                   ^
+      |                                   ;
+  134 |         }
+      |         ~                          
+Compilation failed
+d78e4f4

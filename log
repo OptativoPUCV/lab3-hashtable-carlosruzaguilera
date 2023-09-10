@@ -146,3 +146,18 @@ Sun 10 Sep 2023 04:23:41 AM UTC:
  tests:  5|4
 total_score: 30/70
 754e93a
+Sun 10 Sep 2023 04:24:27 AM UTC: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:86:33: error: implicit declaration of function ‘callc’; did you mean ‘calloc’? [-Werror=implicit-function-declaration]
+   86 |     newMap->buckets = (Pair **) callc(capacity, sizeof(Pair *));
+      |                                 ^~~~~
+      |                                 calloc
+hashmap.c:86:23: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   86 |     newMap->buckets = (Pair **) callc(capacity, sizeof(Pair *));
+      |                       ^
+cc1: all warnings being treated as errors
+Compilation failed
+0494dce

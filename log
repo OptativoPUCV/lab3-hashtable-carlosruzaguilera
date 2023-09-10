@@ -522,3 +522,16 @@ hashmap.c:146:29: error: expected ‘;’ before ‘return’
       |             ~~~~~~           
 Compilation failed
 25d923b
+Sun 10 Sep 2023 04:55:43 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:147:35: error: expected ‘;’ before ‘}’ token
+  147 |             return map->buckets[i]
+      |                                   ^
+      |                                   ;
+  148 |         }
+      |         ~                          
+Compilation failed
+a640202

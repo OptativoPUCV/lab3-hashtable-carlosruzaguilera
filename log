@@ -509,3 +509,16 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 076f583
+Sun 10 Sep 2023 04:54:43 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:146:29: error: expected ‘;’ before ‘return’
+  146 |             map->current = i
+      |                             ^
+      |                             ;
+  147 |             return map->buckets[i]
+      |             ~~~~~~           
+Compilation failed
+25d923b

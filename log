@@ -167,3 +167,16 @@ Sun 10 Sep 2023 04:25:17 AM UTC:
  tests:  5|4
 total_score: 30/70
 b9bcf24
+Sun 10 Sep 2023 04:25:52 AM UTC: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:94:25: error: expected ‘;’ before ‘newMap’
+   94 |     newMap->current = -1
+      |                         ^
+      |                         ;
+   95 |     newMap->sie = 0;
+      |     ~~~~~~               
+Compilation failed
+a382675

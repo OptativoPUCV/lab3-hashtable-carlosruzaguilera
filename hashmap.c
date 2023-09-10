@@ -97,7 +97,6 @@ HashMap * createMap(long capacity) {
     return newMap;
 }
 
-
 void eraseMap(HashMap * map, char * key) {
     Pair * pair = searchMap(map, key);
     if (pair != NULL) {
@@ -107,24 +106,29 @@ void eraseMap(HashMap * map, char * key) {
     }
 }
 
+}
 
-Pair * searchMap(HashMap * map,  char * key) {   
-  if (map == NULL || key == NULL) return NULL;
-  long idx = hash(key, map->capacity);
+
+Pair * searchMap(HashMap * map, char * key) {
+    if (map == NULL || key == NULL) return NULL;
+
+    long idx = hash(key, map->capacity);
     while (map->buckets[idx] != NULL) {
         if (map->buckets[idx]->key != NULL && strcmp(map->buckets[idx]->key, key) == 0) {
             map->current = idx;
             return map->buckets[idx];
+        }
+        idx = (idx + 1) % map->capacity;
+    }
 
     return NULL;
 }
 
+
 Pair * firstMap(HashMap * map) {
 
-    return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
 
-    return NULL;
 }

@@ -332,3 +332,21 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 88b6a40
+Sun 10 Sep 2023 04:49:15 AM UTC: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c:109:1: error: expected identifier or ‘(’ before ‘}’ token
+  109 | }
+      | ^
+hashmap.c: In function ‘firstMap’:
+hashmap.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+hashmap.c: In function ‘nextMap’:
+hashmap.c:134:1: error: control reaches end of non-void function [-Werror=return-type]
+  134 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+63759d3
